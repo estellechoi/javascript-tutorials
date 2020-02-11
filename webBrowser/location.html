@@ -1,0 +1,46 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="button" value="location.href" id="locationBtn">
+  <input type="button" value="location.reload()" id="reloadBtn">
+
+  <script>
+    // * location : 문서의 주소와 관련된 객체
+    var locationBtn = document.querySelector("#locationBtn");
+    locationBtn.addEventListener("click", function() {
+      // 문서 이동
+      location.href = "www.nave.com"; // location = "www.nave.com";
+    });
+
+    var reloadBtn = document.querySelector("#reloadBtn");
+    reloadBtn.addEventListener("click", function() {
+      // 문서 reload
+      location.reload();
+    });
+
+
+
+
+    // 현재 윈도우의 URL 알아내기
+    document.write(location.toString() + "<br>");
+    document.write(location.herf + "<br>");
+
+    // URL parsing
+    // https://opentutorials.org:80/module/1?id=1#bookmark
+    document.write(location.protocol + "<br>"); // https
+    document.write(location.host + "<br>"); // 서버 컴퓨터 식별
+    document.write(location.port + "<br>"); // 서버 컴퓨터의 애플리케이션 식별
+    document.write(location.pathname + "<br>"); // 서버 애플리케이션 내의 경로 반환
+    document.write(location.search + "<br>"); // url 의 '?id=1' '?' 이후의 내용 반환
+    document.write(location.hash + "<br>"); // 문서의 특정 위치에 지정된 북마크 반환
+  </script>
+</body>
+
+</html>
