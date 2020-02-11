@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="button" value="alert" id="alertBtn">
+  <input type="button" value="confirm" id="confirmBtn">
+  <input type="button" value="confirm" id="promptBtn">
+
+  <script>
+    var alertBtn = document.querySelector("#alertBtn");
+    alertBtn.addEventListener("click", function() {
+      alert("hey");
+    });
+
+    vr confirmBtn = document.querySelector("#confirmBtn");
+    confirmBtn.addEventListener("click", function() {
+      // confirm() 은 사용자 선택에 따라 true/false 를 반환한다.
+      if (confirm("ok ?")) {
+        alert("ok");
+      } else {
+        alert("not ok");
+      }
+    });
+
+    var promptBtn = document.querySelector("#promptBtn");
+    promptBtn.addEventListener("click", function() {
+      // prompt() 는 사용자의 입력값을 반환한다.
+      if (prompt("id : ") === "estellechoi") {
+        alert("welcome");
+      } else {
+        alert("sorry.");
+      }
+    });
+  </script>
+</body>
+
+</html>
