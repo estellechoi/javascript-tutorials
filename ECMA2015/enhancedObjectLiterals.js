@@ -1,4 +1,4 @@
-// Object Literals
+// 1. Function
 var obj = {
 	words: 100,
 	// ES5
@@ -12,3 +12,14 @@ var obj = {
 };
 
 obj.lookup2();
+
+// 2. Value Props
+var figures = 10;
+var dictionary = {
+	// ES5
+	// figures: figures
+	// ES6
+	figures
+};
+
+console.log(dictionary.figures);
